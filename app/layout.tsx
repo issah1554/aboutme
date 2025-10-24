@@ -4,7 +4,7 @@ export const metadata = {
   title: "My App",
   description: "Demo App",
   icons: {
-    icon: "/five-icon.png", // optional
+    icon: "/5.svg", // optional
   },
 };
 
