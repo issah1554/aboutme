@@ -13,7 +13,7 @@ export default function HomePage() {
       <input
         type="text"
         placeholder="Type here..."
-        className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"
       />
 
       <div className="grid grid-cols-3 gap-4 w-full max-w-md">
