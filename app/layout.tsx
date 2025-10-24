@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "My App2",
+  title: "My App",
   description: "Demo App",
   icons: {
     icon: "/five-icon.png", // optional

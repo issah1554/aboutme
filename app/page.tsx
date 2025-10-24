@@ -1,12 +1,12 @@
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8 space-y-6">
-      <div className="bg-blue-500 text-white p-8 rounded-lg shadow-lg">
+      <div className="bg-primary text-white p-8 rounded-lg shadow-lg">
         <h1 className="text-4xl font-bold">Tailwind is working!</h1>
         <p className="mt-4 text-lg">If you see this styled, Tailwind is active.</p>
       </div>
 
-      <button className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
+      <button className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-green-600 transition">
         Click Me
       </button>
 
