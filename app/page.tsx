@@ -59,7 +59,7 @@ export default function HomePage() {
             className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:text-primary"
             rows={4}
           />
-          <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition">
+          <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-600 transition">
             Send Message
           </button>
         </form>

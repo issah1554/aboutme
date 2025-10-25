@@ -1,49 +1,82 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Original Colors in OKLCH  */
+  --color-primary: oklch(63% 0.102 70);
+  --color-secondary: oklch(58% 0.062 200);
+  --color-accent: oklch(74% 0.142 85);
+  --color-neutral: oklch(56% 0 0);
 
-  --color-primary-lightest: #faf4ef;
-  --color-primary-lighter: #f3e3d2;
-  --color-primary-light: #d6bfa8;
-  --color-primary: #996633;
-  --color-primary-dark: #704a23;
-  --color-primary-darker: #4c3119;
-  --color-primary-darkest: #2b1b0f;
+  /* === Primary Shades === */
+  --color-primary-50: oklch(97% 0.015 70);
+  --color-primary-100: oklch(92% 0.035 70);
+  --color-primary-200: oklch(82% 0.055 70);
+  --color-primary-300: oklch(77% 0.065 70);
+  --color-primary-400: oklch(72% 0.075 70);
+  --color-primary-500: var(--color-primary);
+  --color-primary-600: oklch(52% 0.085 70);
+  --color-primary-700: oklch(47% 0.075 70);
+  --color-primary-800: oklch(42% 0.065 70);
+  --color-primary-900: oklch(32% 0.045 70);
 
-  /* === Secondary (Muted Teal) === */
-  --color-secondary-light: #a4c7c7;
-  --color-secondary: #3b7d7d;
-  --color-secondary-dark: #275353;
+  /* === Secondary Shades === */
+  --color-secondary-50: oklch(95% 0.018 200);
+  --color-secondary-100: oklch(90% 0.028 200);
+  --color-secondary-200: oklch(80% 0.038 200);
+  --color-secondary-300: oklch(70% 0.048 200);
+  --color-secondary-400: oklch(65% 0.052 200);
+  --color-secondary-500: var(--color-secondary);
+  --color-secondary-600: oklch(53% 0.055 200);
+  --color-secondary-700: oklch(48% 0.048 200);
+  --color-secondary-800: oklch(43% 0.042 200);
+  --color-secondary-900: oklch(33% 0.032 200);
 
-  /* === Accent (Soft Gold) === */
-  --color-accent-light: #f5dca3;
-  --color-accent: #d4a017;
-  --color-accent-dark: #8c6b10;
-
-  /* === Status Colors === */
-  --color-success: #22c55e;
-  --color-warning: #eab308;
-  --color-error: #ef4444;
-  --color-info: #3b82f6;
+  /* === Accent Shades === */
+  --color-accent-50: oklch(97% 0.035 85);
+  --color-accent-100: oklch(92% 0.065 85);
+  --color-accent-200: oklch(87% 0.085 85);
+  --color-accent-300: oklch(82% 0.105 85);
+  --color-accent-400: oklch(77% 0.125 85);
+  --color-accent-500: var(--color-accent);
+  --color-accent-600: oklch(67% 0.115 85);
+  --color-accent-700: oklch(62% 0.105 85);
+  --color-accent-800: oklch(57% 0.095 85);
+  --color-accent-900: oklch(47% 0.075 85);
 
   /* === Neutral Base === */
-  --neutral-white: #ffffff;
-  --neutral-50: #fafafa;
-  --neutral-100: #f5f5f5;
-  --neutral-200: #e5e5e5;
-  --neutral-300: #d4d4d4;
-  --neutral-400: #a3a3a3;
-  --neutral-500: #737373;
-  --neutral-600: #525252;
-  --neutral-700: #404040;
-  --neutral-800: #262626;
-  --neutral-900: #171717;
-  --neutral-black: #000000;
+  --color-neutral-white: oklch(100% 0 0);
+  --color-neutral-50: oklch(98% 0 0);
+  --color-neutral-100: oklch(96% 0 0);
+  --color-neutral-200: oklch(92% 0 0);
+  --color-neutral-300: oklch(87% 0 0);
+  --color-neutral-400: oklch(70% 0 0);
+  --color-neutral-500: var(--color-neutral);
+  --color-neutral-600: oklch(45% 0 0);
+  --color-neutral-700: oklch(37% 0 0);
+  --color-neutral-800: oklch(25% 0 0);
+  --color-neutral-900: oklch(17% 0 0);
+  --color-neutral-black: oklch(0% 0 0);
+
+  /* === Status Colors === */
+  --color-success: oklch(72% 0.194 149);
+  --color-warning: oklch(82% 0.154 84);
+  --color-error: oklch(64% 0.246 25);
+  --color-info: oklch(67% 0.169 259);
+  --color-pending: oklch(76% 0.158 77);
 }
 
-
+data[theme="chatgpt-light"] {
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
