@@ -26,15 +26,15 @@ export default function HomePage() {
 
       {/* Projects Section */}
       <section id="projects" className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-accent text-white p-6 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold">Project One</h3>
           <p className="mt-2 text-gray-100">A brief description of project one.</p>
         </div>
-        <div className="bg-green-500 text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-success text-white p-6 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold">Project Two</h3>
           <p className="mt-2 text-gray-100">A brief description of project two.</p>
         </div>
-        <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-secondary text-white p-6 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold">Project Three</h3>
           <p className="mt-2 text-gray-100">A brief description of project three.</p>
         </div>
@@ -47,19 +47,19 @@ export default function HomePage() {
           <input
             type="text"
             placeholder="Your Name"
-            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:text-primary"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:text-primary"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent"
           />
           <textarea
             placeholder="Message"
-            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:text-primary"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent"
             rows={4}
           />
-          <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-600 transition">
+          <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-600 transition self-end">
             Send Message
           </button>
         </form>
