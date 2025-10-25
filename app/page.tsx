@@ -1,6 +1,7 @@
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-8 space-y-12">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-8 space-y-12 scrollbar-thin 
+     scrollbar-thumb-primary scrollbar-active:bg-error scrollbar-hover:bg-secondary scrollbar-track-accent-50 h-32 overflow-y-scroll">
 
       {/* Header */}
       <header className="w-full max-w-4xl flex flex-col items-center space-y-4">
@@ -26,7 +27,7 @@ export default function HomePage() {
 
       {/* Projects Section */}
       <section id="projects" className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-accent text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-accent text-white p-6 rounded-lg shadow-lg hover:scale-102 hover:shadow-2xl transform transition cursor-pointer">
           <h3 className="text-xl font-semibold">Project One</h3>
           <p className="mt-2 text-gray-100">A brief description of project one.</p>
         </div>
@@ -47,16 +48,16 @@ export default function HomePage() {
           <input
             type="text"
             placeholder="Your Name"
-            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent text-neutral-500"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent text-neutral-500"
           />
           <textarea
             placeholder="Message"
-            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent "
             rows={4}
           />
           <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-600 transition self-end">
