@@ -1,4 +1,7 @@
 
+"use client";
+
+import EditableField from "@/components/ContentEditable";
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-8 mt-8 space-y-12 ">
@@ -20,10 +23,12 @@ export default function HomePage() {
       <section id="about" className="w-full max-w-4xl bg-white rounded-lg shadow p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">About</h2>
         <p className="text-gray-700">
-          issah1554 is a personal platform for tracking projects, sharing knowledge,
+          <EditableField placeholder="Name" validate={(val) => val.includes("@")} value="@IssaH" /> is a personal platform for tracking projects, sharing knowledge,
           and connecting with like-minded enthusiasts. Explore projects and updates below.
         </p>
       </section>
+
+      
 
       {/* Projects Section */}
       <section id="projects" className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
