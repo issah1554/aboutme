@@ -44,40 +44,38 @@ const EditableField: React.FC<EditableFieldProps> = ({
 
     return (
         <>
-            <style>
-                {`
-          .editable-field {
-            display: inline-block;
-            border-bottom: 1px dashed rgba(16, 75, 238, 0.5);
-            transition: background 0.2s, border-color 0.2s, color 0.2s;
-            cursor: text;
-            text-align: left;
-            min-width: 3ch;
-            direction: ltr;
-          }
+            <style> {`
+                .editable-field {
+                    display: inline-block;
+                    border-bottom: 1px dashed rgba(16, 75, 238, 0.5);
+                    transition: background 0.2s, border-color 0.2s, color 0.2s;
+                    cursor: text;
+                    text-align: left;
+                    min-width: 3ch;
+                    direction: ltr;
+                }
 
-          .editable-field:hover {
-            background: rgba(16, 75, 238, 0.1);
-            border-bottom-color: rgba(16, 75, 238, 0.8);
-          }
+                .editable-field:hover {
+                    background: rgba(16, 75, 238, 0.1);
+                    border-bottom-color: rgba(16, 75, 238, 0.8);
+                }
 
-          .editable-field:focus {
-            outline: none !important;
-            background: rgba(16, 75, 238, 0.2);
-            caret-color: #104bee;
-          }
+                .editable-field:focus {
+                    outline: none !important;
+                    background: rgba(16, 75, 238, 0.2);
+                    caret-color: #104bee;
+                }
 
-          .editable-field:empty::before {
-            content: attr(data-placeholder);
-            color: rgba(0, 0, 0, 0.3);
-            pointer-events: none;
-          }
-            .editable-field.invalid {
-            border-bottom-color: red !important;
-            background: rgba(255, 0, 0, 0.1); /* light red background */
-            }
-        `}
-            </style>
+                .editable-field:empty::before {
+                    content: attr(data-placeholder);
+                    color: rgba(0, 0, 0, 0.3);
+                    pointer-events: none;
+                }
+                    .editable-field.invalid {
+                    border-bottom-color: red !important;
+                    background: rgba(255, 0, 0, 0.1); /* light red background */
+                    }
+         `}</style>
 
             <span
                 ref={spanRef}
