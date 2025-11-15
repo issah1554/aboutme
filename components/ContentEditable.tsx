@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useRef } from "react";
 import styles from "./EditableField.module.css";
 
@@ -8,6 +7,7 @@ interface EditableFieldProps {
     placeholder: string;
     className?: string;
     validate?: (value: string) => boolean;
+    editable?: boolean; // new prop
 }
 
 const EditableField: React.FC<EditableFieldProps> = ({
@@ -15,12 +15,15 @@ const EditableField: React.FC<EditableFieldProps> = ({
     placeholder,
     className = "",
     validate,
+    editable = true, // default is true
 }) => {
     const [content, setContent] = useState(value);
     const [isValid, setIsValid] = useState(true);
     const spanRef = useRef<HTMLSpanElement>(null);
 
     const handleFocus = () => {
+        if (!editable) return;
+
         const el = spanRef.current;
         if (!el) return;
 
@@ -35,25 +38,22 @@ const EditableField: React.FC<EditableFieldProps> = ({
     };
 
     const handleBlur = () => {
+        if (!editable) return;
+
         if (validate) {
             const valid = validate(spanRef.current?.textContent || "");
             setIsValid(valid);
         }
     };
 
-    const handleInput = (e: React.FormEvent<HTMLSpanElement>) => {
-        setContent(e.currentTarget.textContent || "");
-    };
-
     return (
         <span
             ref={spanRef}
-            contentEditable
+            contentEditable={editable}
             data-placeholder={placeholder}
             className={`${styles["editable-field"]} ${!isValid ? styles.invalid : ""} ${className}`}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            onInput={handleInput}
             suppressContentEditableWarning
         >
             {content}

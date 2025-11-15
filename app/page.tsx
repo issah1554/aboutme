@@ -23,7 +23,7 @@ export default function HomePage() {
       <section id="about" className="w-full max-w-4xl bg-white rounded-lg shadow p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">About</h2>
         <p className="text-gray-700">
-          <EditableField placeholder="Name" validate={(val) => val.includes("@")} value="@IssaH" /> is a personal platform for tracking projects, sharing knowledge,
+          <EditableField placeholder="Name" validate={(val) => val.includes("@")} value="@IssaH" editable={false} /> is a personal platform for tracking projects, sharing knowledge,
           and connecting with like-minded enthusiasts. Explore projects and updates below.
         </p>
       </section>
