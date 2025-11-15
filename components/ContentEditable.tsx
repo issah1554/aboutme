@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+import styles from "./EditableField.module.css";
 
 interface EditableFieldProps {
     value?: string;
     placeholder: string;
     className?: string;
-    validate?: (value: string) => boolean; // validation function
+    validate?: (value: string) => boolean;
 }
 
 const EditableField: React.FC<EditableFieldProps> = ({
@@ -19,19 +20,17 @@ const EditableField: React.FC<EditableFieldProps> = ({
     const [isValid, setIsValid] = useState(true);
     const spanRef = useRef<HTMLSpanElement>(null);
 
-    // Move caret to the end on focus
     const handleFocus = () => {
         const el = spanRef.current;
         if (!el) return;
 
         const range = document.createRange();
         range.selectNodeContents(el);
-        range.collapse(false); // moves caret to end
+        range.collapse(false);
         const sel = window.getSelection();
         sel?.removeAllRanges();
         sel?.addRange(range);
 
-        // reset validation when user focuses
         setIsValid(true);
     };
 
@@ -42,53 +41,23 @@ const EditableField: React.FC<EditableFieldProps> = ({
         }
     };
 
+    const handleInput = (e: React.FormEvent<HTMLSpanElement>) => {
+        setContent(e.currentTarget.textContent || "");
+    };
+
     return (
-        <>
-            <style> {`
-                .editable-field {
-                    display: inline-block;
-                    border-bottom: 1px dashed rgba(16, 75, 238, 0.5);
-                    transition: background 0.2s, border-color 0.2s, color 0.2s;
-                    cursor: text;
-                    text-align: left;
-                    min-width: 3ch;
-                    direction: ltr;
-                }
-
-                .editable-field:hover {
-                    background: rgba(16, 75, 238, 0.1);
-                    border-bottom-color: rgba(16, 75, 238, 0.8);
-                }
-
-                .editable-field:focus {
-                    outline: none !important;
-                    background: rgba(16, 75, 238, 0.2);
-                    caret-color: #104bee;
-                }
-
-                .editable-field:empty::before {
-                    content: attr(data-placeholder);
-                    color: rgba(0, 0, 0, 0.3);
-                    pointer-events: none;
-                }
-                    .editable-field.invalid {
-                    border-bottom-color: red !important;
-                    background: rgba(255, 0, 0, 0.1); /* light red background */
-                    }
-         `}</style>
-
-            <span
-                ref={spanRef}
-                contentEditable
-                data-placeholder={placeholder}
-                className={`editable-field ${!isValid ? "invalid" : ""} ${className}`}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                suppressContentEditableWarning
-            >
-                {content}
-            </span>
-        </>
+        <span
+            ref={spanRef}
+            contentEditable
+            data-placeholder={placeholder}
+            className={`${styles["editable-field"]} ${!isValid ? styles.invalid : ""} ${className}`}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            onInput={handleInput}
+            suppressContentEditableWarning
+        >
+            {content}
+        </span>
     );
 };
 
