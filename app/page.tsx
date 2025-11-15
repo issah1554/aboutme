@@ -1,13 +1,13 @@
+
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-8 space-y-12 scrollbar-thin 
-     scrollbar-thumb-primary scrollbar-active:bg-error scrollbar-hover:bg-secondary scrollbar-track-accent-50 h-32 overflow-y-scroll">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-8 mt-8 space-y-12 ">
 
       {/* Header */}
       <header className="w-full max-w-4xl flex flex-col items-center space-y-4">
         <h1 className="text-5xl font-extrabold text-gray-800">issah1554</h1>
         <p className="text-lg text-gray-600 text-center">
-          Welcome to issah1554 – your personal hub for projects, learning, and more.
+          Welcome to issah1554 - your personal hub for projects, learning, and more.
         </p>
         <nav className="flex space-x-6 mt-4">
           <a href="#about" className="text-gray-700 hover:text-primary transition">About</a>

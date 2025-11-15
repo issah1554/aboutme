@@ -7,8 +7,8 @@ export default function TopNav() {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-            <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+        <nav className="w-full bg-white border-b border-b-neutral-200  fixed top-0 left-0 z-50">
+            <div className=" mx-auto py-3 px-6 flex justify-between items-center">
                 <h1 className="text-2xl font-bold text-primary">issah1554</h1>
 
                 <button
@@ -29,8 +29,11 @@ export default function TopNav() {
                         Projects
                     </Link>
                     <Link href="#contact" className="text-gray-700 hover:text-primary">
-                        Contact
+                        Showcase
                     </Link>
+                    <a href="https://github.com/issah1554" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-github text-2xl text-gray-700 hover:text-primary"></i>
+                    </a>
                 </div>
             </div>
         </nav>

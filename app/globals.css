@@ -66,8 +66,10 @@
 }
 
 @plugin 'tailwind-scrollbar' {
-  nocompatible: true;
+  preferredStrategy: 'pseudoelements';
 }
+
+
 
 
 data[theme="chatgpt-light"] {
