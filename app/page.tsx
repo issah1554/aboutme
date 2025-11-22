@@ -1,10 +1,10 @@
-
 "use client";
 
 import EditableField from "@/components/ContentEditable";
+
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-8 mt-8 space-y-12 ">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-8 mt-8 space-y-12">
 
       {/* Header */}
       <header className="w-full max-w-4xl flex flex-col items-center space-y-4">
@@ -23,27 +23,15 @@ export default function HomePage() {
       <section id="about" className="w-full max-w-4xl bg-white rounded-lg shadow p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">About</h2>
         <p className="text-gray-700">
-          <EditableField placeholder="Name" validate={(val) => val.includes("@")} value="@IssaH" editable={false} /> is a personal platform for tracking projects, sharing knowledge,
+          <EditableField
+            placeholder="Name"
+            validate={(val) => val.includes("@")}
+            value="@IssaH"
+            editable={false}
+          />{" "}
+          is a personal platform for tracking projects, sharing knowledge,
           and connecting with like-minded enthusiasts. Explore projects and updates below.
         </p>
-      </section>
-
-      
-
-      {/* Projects Section */}
-      <section id="projects" className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-accent text-white p-6 rounded-lg shadow-lg hover:scale-102 hover:shadow-2xl transform transition cursor-pointer">
-          <h3 className="text-xl font-semibold">Project One</h3>
-          <p className="mt-2 text-gray-100">A brief description of project one.</p>
-        </div>
-        <div className="bg-success text-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold">Project Two</h3>
-          <p className="mt-2 text-gray-100">A brief description of project two.</p>
-        </div>
-        <div className="bg-secondary text-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold">Project Three</h3>
-          <p className="mt-2 text-gray-100">A brief description of project three.</p>
-        </div>
       </section>
 
       {/* Contact Section */}
@@ -53,22 +41,57 @@ export default function HomePage() {
           <input
             type="text"
             placeholder="Your Name"
-            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent text-neutral-500"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-accent text-neutral-500"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent text-neutral-500"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-accent text-neutral-500"
           />
           <textarea
             placeholder="Message"
-            className="border border-gray-300 rounded-lg p-3 focus:outline-accent focus:text-accent "
+            className="border border-gray-300 rounded-lg p-3 focus:outline-accent"
             rows={4}
           />
           <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-600 transition self-end">
             Send Message
           </button>
         </form>
+      </section>
+
+      {/* Projects Section (Moved down + links added) */}
+      <section id="projects" className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <a
+          href="https://www.ardhi.co.tz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-accent text-white p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transform transition block"
+        >
+          <h3 className="text-xl font-semibold">Project One</h3>
+          <p className="mt-2 text-gray-100">A brief description of project one.</p>
+        </a>
+
+        <a
+          href="https://example.com/project2"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-success text-white p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transform transition block"
+        >
+          <h3 className="text-xl font-semibold">Project Two</h3>
+          <p className="mt-2 text-gray-100">A brief description of project two.</p>
+        </a>
+
+        <a
+          href="https://example.com/project3"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-secondary text-white p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transform transition block"
+        >
+          <h3 className="text-xl font-semibold">Project Three</h3>
+          <p className="mt-2 text-gray-100">A brief description of project three.</p>
+        </a>
+
       </section>
 
       {/* Footer */}
