@@ -6,45 +6,114 @@ export default function TopNav() {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="w-full bg-white border-b border-b-neutral-200 fixed top-0 left-0 z-50">
-            <div className="mx-auto py-2 px-6 flex justify-between items-center">
+        <nav
+            className="
+        fixed top-0 left-0 z-50 w-full
+        bg-linear-to-b from-white/70 to-white/40
+        backdrop-blur-xs
+        border-b border-white/30
+        shadow-sm
+        h-18
+      "
+        >
+            <div className="mx-auto px-6 h-full flex items-center justify-between">
 
-                {/* Logo + Name */}
-                <div className="flex items-center">
-                    {/* <span className="text-3xl font-extrabold font-sans">5t</span> */}
-                    <span className="text-2xl font-bold text-primary hidden md:inline ml-1">
-                        IssaH
+                {/* LEFT: Logo + Nav */}
+                <div className="flex items-center gap-8">
+                    <span className="text-4xl font-bold hover:text-primary hidden md:inline">
+                        <i className="bi bi-5-circle"></i>
                     </span>
+
+                    {/* Desktop Nav */}
+                    <div className="hidden md:flex items-center gap-6">
+                        <Link href="#about" className="text-gray-700 hover:text-primary">
+                            About
+                        </Link>
+                        <Link href="#projects" className="text-gray-700 hover:text-primary">
+                            Projects
+                        </Link>
+                        <Link href="#contact" className="text-gray-700 hover:text-primary">
+                            Showcase
+                        </Link>
+                    </div>
                 </div>
 
+                {/* RIGHT: Socials + Theme */}
+                <div className="hidden md:flex items-center gap-4">
+                    <Link
+                        href="https://www.linkedin.com/in/issa-h-700814259/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-700 hover:text-primary"
+                    >
+                        <i className="bi bi-linkedin text-xl" />
+                    </Link>
 
-                {/* Hamburger button */}
+                    <a
+                        href="https://github.com/issah1554"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-700 hover:text-primary"
+                    >
+                        <i className="bi bi-github text-xl" />
+                    </a>
+
+                    {/* Theme toggle */}
+                    <button
+                        aria-label="Toggle theme"
+                        className="text-gray-700 hover:text-primary"
+                    >
+                        <i className="bi bi-moon-stars text-xl" />
+                    </button>
+                </div>
+
+                {/* Hamburger (mobile) */}
                 <button
-                    className="md:hidden text-gray-700 focus:outline-none"
+                    className="md:hidden text-gray-700"
                     onClick={() => setOpen(!open)}
                 >
-                    ☰
+                    <i className="bi bi-list text-2xl" />
                 </button>
+            </div>
 
-                {/* Nav Links */}
+            {/* Mobile Menu */}
+            {open && (
                 <div
-                    className={`${open ? "block" : "hidden"
-                        } md:flex space-y-2 md:space-y-0 md:space-x-6 absolute md:static top-12 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 items-center`}
+                    className="
+            md:hidden
+            px-6 py-4
+            flex flex-col gap-4
+            bg-white/80 backdrop-blur-sm
+            border-t border-white/30
+          "
                 >
-                    <Link href="#about" className="text-gray-700 hover:text-primary pt-1">
+                    <Link href="#about" onClick={() => setOpen(false)}>
                         About
                     </Link>
-                    <Link href="#projects" className="text-gray-700 hover:text-primary pt-1">
+                    <Link href="#projects" onClick={() => setOpen(false)}>
                         Projects
                     </Link>
-                    <Link href="#contact" className="text-gray-700 hover:text-primary pt-1">
+                    <Link href="#contact" onClick={() => setOpen(false)}>
                         Showcase
                     </Link>
-                    <a href="https://github.com/issah1554" target="_blank" rel="noopener noreferrer">
-                        <i className="bi bi-github text-2xl text-gray-700 hover:text-primary"></i>
-                    </a>
+
+                    <div className="flex gap-4 pt-2">
+                        <a
+                            href="https://www.linkedin.com/in/issa-h-700814259/"
+                            target="_blank"
+                        >
+                            <i className="bi bi-linkedin text-xl" />
+                        </a>
+
+                        <a href="https://github.com/issah1554" target="_blank">
+                            <i className="bi bi-github text-xl" />
+                        </a>
+                        <button>
+                            <i className="bi bi-moon-stars text-xl" />
+                        </button>
+                    </div>
                 </div>
-            </div>
+            )}
         </nav>
     );
 }

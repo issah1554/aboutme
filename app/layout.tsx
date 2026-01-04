@@ -3,10 +3,10 @@ import "./globals.css";
 import TopNav from "@/components/Navbar";
 
 export const metadata = {
-  title: "My App",
+  title: "About IssaH",
   description: "Demo App",
   icons: {
-    icon: "/5.svg", // optional
+    icon: "/5-circle-fill.svg", //
   },
 };
 
