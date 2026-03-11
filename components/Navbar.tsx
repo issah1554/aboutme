@@ -13,26 +13,24 @@ export default function TopNav() {
         backdrop-blur-xs
         border-b border-white/30
         shadow-sm
-        h-18
-      "
-        >
+        h-18">
             <div className="mx-auto px-6 h-full flex items-center justify-between">
 
                 {/* LEFT: Logo + Nav */}
                 <div className="flex items-center gap-8">
-                    <span className="text-4xl font-bold hover:text-primary hidden md:inline">
+                    <span className="text-main-600 text-4xl font-bold hover:text-primary-500 hidden md:inline">
                         <i className="bi bi-5-circle"></i>
                     </span>
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="#about" className="text-gray-700 hover:text-primary">
+                        <Link href="#about" className="text-main-500 hover:text-primary-500">
                             About
                         </Link>
-                        <Link href="#projects" className="text-gray-700 hover:text-primary">
+                        <Link href="#projects" className="text-main-500 hover:text-primary-500">
                             Projects
                         </Link>
-                        <Link href="#contact" className="text-gray-700 hover:text-primary">
+                        <Link href="#contact" className="text-main-500 hover:text-primary-500">
                             Showcase
                         </Link>
                     </div>
@@ -44,7 +42,7 @@ export default function TopNav() {
                         href="https://www.linkedin.com/in/issa-h-700814259/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-primary"
+                        className="text-main-700 hover:text-primary-500"
                     >
                         <i className="bi bi-linkedin text-xl" />
                     </Link>
@@ -53,7 +51,7 @@ export default function TopNav() {
                         href="https://github.com/issah1554"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-primary"
+                        className="text-main-700 hover:text-primary-500"
                     >
                         <i className="bi bi-github text-xl" />
                     </a>
@@ -61,7 +59,7 @@ export default function TopNav() {
                     {/* Theme toggle */}
                     <button
                         aria-label="Toggle theme"
-                        className="text-gray-700 hover:text-primary"
+                        className="text-main-700 hover:text-primary-500"
                     >
                         <i className="bi bi-moon-stars text-xl" />
                     </button>
@@ -69,7 +67,7 @@ export default function TopNav() {
 
                 {/* Hamburger (mobile) */}
                 <button
-                    className="md:hidden text-gray-700"
+                    className="md:hidden text-main-700"
                     onClick={() => setOpen(!open)}
                 >
                     <i className="bi bi-list text-2xl" />
