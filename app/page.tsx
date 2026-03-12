@@ -4,7 +4,7 @@ import EditableField from "@/components/ContentEditable";
 
 export default function HomePage() {
   return (
-    <div className="min-h-full bg-main-50 flex flex-col items-center justify-start p-8 pt-24 space-y-12">
+    <div className="min-h-full bg-main-100 flex flex-col items-center justify-start p-8 pt-24 space-y-12">
 
       {/* Header */}
       <header className="w-full max-w-4xl flex flex-col items-center space-y-4">
