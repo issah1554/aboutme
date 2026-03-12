@@ -7,30 +7,30 @@ export default function TopNav() {
 
     return (
         <nav
-            className="
-        fixed top-0 left-0 z-50 w-full
-        bg-linear-to-b from-white/70 to-white/40
-        backdrop-blur-xs
-        border-b border-white/30
-        shadow-sm
-        h-18">
-            <div className="mx-auto px-6 h-full flex items-center justify-between">
+            className=" fixed top-0 left-0 z-50 w-full bg-linear-to-b
+             from-white/70 to-white/40 backdrop-blur-xs
+            shadow-sm h-15 flex items-stretch">
 
-                {/* LEFT: Logo + Nav */}
+            <Link href="/">
+                <span className="hidden md:flex bg-primary-600 hover:bg-primary-700 text-white text-4xl 
+                  font-bold h-full px-4 items-center justify-center cursor-pointer">
+                    <i className="bi bi-5-circle leading-none"></i>
+                </span>
+            </Link>
+
+            <div className="mx-auto px-6 h-full flex items-center justify-between w-full">
+                {/* LEFT: Nav */}
                 <div className="flex items-center gap-8">
-                    <span className="text-main-600 text-4xl font-bold hover:text-primary-500 hidden md:inline">
-                        <i className="bi bi-5-circle"></i>
-                    </span>
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="#about" className="text-main-500 hover:text-primary-500">
+                        <Link href="#about" className="text-main-500 hover:text-primary-600">
                             About
                         </Link>
-                        <Link href="#projects" className="text-main-500 hover:text-primary-500">
+                        <Link href="#projects" className="text-main-500 hover:text-primary-600">
                             Projects
                         </Link>
-                        <Link href="#contact" className="text-main-500 hover:text-primary-500">
+                        <Link href="#contact" className="text-main-500 hover:text-primary-600">
                             Showcase
                         </Link>
                     </div>
@@ -42,7 +42,7 @@ export default function TopNav() {
                         href="https://www.linkedin.com/in/issa-h-700814259/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-main-700 hover:text-primary-500"
+                        className="text-main-700 hover:text-primary-600"
                     >
                         <i className="bi bi-linkedin text-xl" />
                     </Link>
@@ -51,7 +51,7 @@ export default function TopNav() {
                         href="https://github.com/issah1554"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-main-700 hover:text-primary-500"
+                        className="text-main-700 hover:text-primary-600"
                     >
                         <i className="bi bi-github text-xl" />
                     </a>
@@ -59,7 +59,7 @@ export default function TopNav() {
                     {/* Theme toggle */}
                     <button
                         aria-label="Toggle theme"
-                        className="text-main-700 hover:text-primary-500"
+                        className="text-main-700 hover:text-primary-600"
                     >
                         <i className="bi bi-moon-stars text-xl" />
                     </button>

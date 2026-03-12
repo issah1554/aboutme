@@ -4,7 +4,7 @@ import EditableField from "@/components/ContentEditable";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-main-50 flex flex-col items-center justify-start p-8 pt-24 space-y-12">
+    <div className="min-h-full bg-main-50 flex flex-col items-center justify-start p-8 pt-24 space-y-12">
 
       {/* Header */}
       <header className="w-full max-w-4xl flex flex-col items-center space-y-4">
@@ -66,7 +66,7 @@ export default function HomePage() {
           href="https://www.ardhi.co.tz/"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-accent-400 text-white p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transform transition block"
+          className="bg-accent-500 text-white p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transform transition block"
         >
           <h3 className="text-xl font-semibold">Project One</h3>
           <p className="mt-2 text-main-100">A brief description of project one.</p>
@@ -93,11 +93,6 @@ export default function HomePage() {
         </a>
 
       </section>
-
-      {/* Footer */}
-      <footer className="w-full text-center text-main-500 mt-12">
-        &copy; {new Date().getFullYear()} issah1554. All rights reserved.
-      </footer>
 
     </div>
   );
