@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-main-200 border-t border-main-300 text-main-700 py-6 mt-auto">
+    <footer className="w-full bg-primary-50 border-t-2 border-primary-100 text-main-700 py-6 mt-auto">
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
@@ -78,7 +78,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-main-400 pt-6 text-center text-sm text-main-600">
+        <div className="mt-10 border-t border-primary-200 pt-6 text-center text-sm text-main-600">
           &copy; {new Date().getFullYear()} issah1554. All rights reserved.
         </div>
       </div>
